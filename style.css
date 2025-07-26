@@ -70,7 +70,17 @@ header {
     box-shadow: 0 0 20px var(--accent);
     transform: scale(1.05);
 }
-
+/* Hero Gradient Animation */
+.hero {
+    background: linear-gradient(120deg, #1c1c1c, #000, #1c1c1c);
+    background-size: 400% 400%;
+    animation: gradientMove 8s ease infinite;
+}
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
 /* Sections */
 .section {
