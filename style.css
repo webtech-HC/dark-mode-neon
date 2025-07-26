@@ -278,14 +278,25 @@ header.scrolled {
 
 
 /* Testimonials */
-.testimonial {
-    background: #1c1c1c;
-    padding: 30px;
-    border-radius: 12px;
-    margin: 20px auto;
+.testimonial-slider {
+    position: relative;
     max-width: 700px;
-    font-style: italic;
+    margin: 40px auto;
+    text-align: center;
 }
+.testimonial {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.8s ease;
+}
+.testimonial.active {
+    opacity: 1;
+    position: relative;
+}
+
 
 /* Floating CTA */
 .floating-cta {
