@@ -7,6 +7,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// testimonial slider
 const testimonials = document.querySelectorAll('.testimonial');
 let index = 0;
 
