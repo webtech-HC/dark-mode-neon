@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
   <!-- Header -->
@@ -42,7 +43,7 @@
   </section>
 
   <!-- About -->
-  <section id="about" class="section about-section">
+  <section id="about" class="section about-section" data-aos="fade-up">
     <div class="about-container">
       <div class="about-text">
         <h2>About Me</h2>
@@ -141,5 +142,12 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
 </body>
 </html>
