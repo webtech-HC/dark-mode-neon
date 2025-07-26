@@ -34,3 +34,30 @@ menuToggle.addEventListener('click', () => {
   menuToggle.classList.toggle('open');
 });
 
+
+// jquery
+$(document).ready(function() {
+    // Smooth scroll
+    $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top
+        }, 800);
+    });
+
+    // Fade-in sections as they appear
+    $('.section').css('opacity', 0);
+    $(window).on('scroll', function() {
+        $('.section').each(function() {
+            if($(this).offset().top < $(window).scrollTop() + $(window).height() - 100) {
+                $(this).animate({'opacity': 1}, 1000);
+            }
+        });
+    });
+
+    // Hamburger toggle
+    $('#menu-toggle').on('click', function() {
+        $('.nav-links').toggleClass('active');
+        $(this).toggleClass('open');
+    });
+});
