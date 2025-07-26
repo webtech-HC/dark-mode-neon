@@ -8,14 +8,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // testimonial slider
-const testimonials = document.querySelectorAll('.testimonial');
-let index = 0;
-
-setInterval(() => {
-  testimonials[index].classList.remove('active');
-  index = (index + 1) % testimonials.length;
-  testimonials[index].classList.add('active');
-}, 4000);
+$(document).ready(function() {
+  let index = 0;
+  const testimonials = $('.testimonial');
+  setInterval(function() {
+    testimonials.eq(index).removeClass('active');
+    index = (index + 1) % testimonials.length;
+    testimonials.eq(index).addClass('active');
+  }, 4000);
+});
 
 
 // Scroll effect
@@ -32,3 +33,4 @@ menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('active');
   menuToggle.classList.toggle('open');
 });
+
