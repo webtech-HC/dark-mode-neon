@@ -56,8 +56,10 @@ header.scrolled {
     position: relative;
     transition: color 0.3s ease;
 }
+/* Nav Links Glow on Hover */
 .nav-links a:hover {
     color: var(--accent);
+    text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);
 }
 /* Underline Animation */
 .nav-links a::after {
@@ -85,6 +87,23 @@ header.scrolled {
     background: var(--accent);
     color: #121212;
 }
+
+/* Neon Button Effect */
+.btn-accent {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--accent);
+    color: #121212;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);
+}
+.btn-accent:hover {
+    box-shadow: 0 0 20px var(--accent), 0 0 40px var(--accent);
+    transform: scale(1.05);
+}
+
 
 /* Hamburger Menu (Mobile) */
 .menu-toggle {
